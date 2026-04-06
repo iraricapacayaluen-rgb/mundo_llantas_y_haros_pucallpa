@@ -1,4 +1,7 @@
+Sistema de Prestamos Gota a Gota
+Sistema web para la gestión de préstamos a crédito con facilidades de pago diario, semanal y mensual. Desarrollado como proyecto final del curso de Java Web en SENATI.
 
+Descripción del negocio
 
 
 
