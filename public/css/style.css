@@ -1,0 +1,968 @@
+/* styles.css - Landing page LlanteraAsist */
+/* Sin degradados, colores sólidos, diseño responsive, sidebar fijo en desktop */
+
+/* ---------- RESET Y BASE ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f5f7fb;
+  color: #1e293b;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  min-height: 100vh;
+}
+
+/* ---------- SIDEBAR (barra lateral fija en desktop) ---------- */
+.sidebar {
+  width: 280px;
+  background-color: #ffffff;
+  border-right: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 100;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.02);
+  transition: transform 0.2s ease;
+}
+
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 32px 24px;
+  border-bottom: 1px solid #e9eef3;
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #0f3b2c;
+}
+
+.sidebar-logo i {
+  font-size: 1.8rem;
+  color: #2c5f2d;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 40px 24px;
+  flex: 1;
+}
+
+.sidebar-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  padding: 14px 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 60px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background-color: transparent;
+  font-family: 'Inter', sans-serif;
+}
+
+.btn-login {
+  background-color: #1e3a2f;
+  color: white;
+  border: 1px solid #1e3a2f;
+}
+
+.btn-login i {
+  color: white;
+}
+
+.btn-login:hover {
+  background-color: #102b21;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.btn-register {
+  background-color: #ffffff;
+  color: #1e3a2f;
+  border: 1px solid #1e3a2f;
+}
+
+.btn-register i {
+  color: #1e3a2f;
+}
+
+.btn-register:hover {
+  background-color: #f0f4f0;
+  transform: translateY(-2px);
+}
+
+.sidebar-footer {
+  padding: 28px 24px;
+  border-top: 1px solid #e9eef3;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #5b6e8c;
+}
+
+/* ---------- MAIN CONTENT (se desplaza a la derecha del sidebar) ---------- */
+.main-content {
+  flex: 1;
+  margin-left: 280px;
+  width: calc(100% - 280px);
+  background-color: #f8fafc;
+}
+
+/* SECCIONES GENERALES */
+section {
+  padding: 64px 40px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #0f2b1f;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #1e293b;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.3rem;
+  margin: 0.75rem 0;
+}
+
+p {
+  color: #334155;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+  flex-wrap: wrap;
+  padding-top: 80px;
+  padding-bottom: 40px;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.hero-text p {
+  font-size: 1.125rem;
+  margin: 1.5rem 0;
+  color: #2d3a4b;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.btn-primary, .btn-secondary {
+  padding: 12px 32px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: 0.2s;
+  font-family: 'Inter', sans-serif;
+  border: none;
+}
+
+.btn-primary {
+  background-color: #1e3a2f;
+  color: white;
+  border: 1px solid #1e3a2f;
+}
+
+.btn-primary:hover {
+  background-color: #102b21;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: white;
+  color: #1e3a2f;
+  border: 1px solid #1e3a2f;
+}
+
+.btn-secondary:hover {
+  background-color: #eef2ee;
+  transform: translateY(-2px);
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eef3ea;
+  border-radius: 48px;
+  min-height: 280px;
+  border: 1px solid #d4e0d0;
+}
+
+.hero-image i {
+  font-size: 8rem;
+  color: #2c5f2d;
+}
+
+/* FEATURES (tarjetas sin degradados) */
+.features {
+  background-color: white;
+  border-radius: 32px;
+  margin: 20px auto;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  border: 1px solid #e9edf2;
+}
+
+.features h2 {
+  text-align: center;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 32px;
+  margin-top: 24px;
+}
+
+.feature-card {
+  background: #ffffff;
+  padding: 28px 20px;
+  text-align: center;
+  border-radius: 24px;
+  border: 1px solid #e2e8f0;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+  border-color: #bdd3b4;
+  box-shadow: 0 12px 20px -12px rgba(0,0,0,0.1);
+}
+
+.feature-card i {
+  font-size: 2.8rem;
+  color: #2c5f2d;
+  margin-bottom: 16px;
+}
+
+.feature-card h3 {
+  font-size: 1.4rem;
+  margin: 12px 0 8px;
+}
+
+.feature-card p {
+  color: #475569;
+  font-size: 0.95rem;
+}
+
+/* CÓMO FUNCIONA (steps) */
+.how-it-works {
+  background: #ffffff;
+  border-radius: 32px;
+  margin: 32px auto;
+  border: 1px solid #eef2f6;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+}
+
+.steps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.step {
+  flex: 1;
+  min-width: 200px;
+  text-align: center;
+  background: #fefefe;
+  padding: 28px 20px;
+  border-radius: 28px;
+  border: 1px solid #e4e9f0;
+}
+
+.step-number {
+  background-color: #1e3a2f;
+  color: white;
+  width: 48px;
+  height: 48px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 60px;
+  margin: 0 auto 20px auto;
+  box-shadow: none;
+}
+
+/* CTA SECTION */
+.cta-section {
+  padding: 20px 40px 80px;
+}
+
+.cta-card {
+  background-color: #1e3a2f;
+  padding: 52px 32px;
+  border-radius: 48px;
+  text-align: center;
+  color: white;
+  border: 1px solid #2b4c39;
+}
+
+.cta-card h2 {
+  color: white;
+  margin-bottom: 16px;
+}
+
+.cta-card p {
+  color: #e0f0e3;
+  max-width: 600px;
+  margin: 0 auto 28px auto;
+  font-size: 1.1rem;
+}
+
+.cta-btn {
+  background-color: white;
+  color: #1e3a2f;
+  border: none;
+  padding: 12px 36px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.cta-btn:hover {
+  background-color: #eef2ea;
+  transform: translateY(-2px);
+}
+
+/* ---------- MODAL (diálogo) ---------- */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(2px);
+}
+
+.modal-container {
+  background-color: white;
+  width: 90%;
+  max-width: 460px;
+  border-radius: 32px;
+  overflow: hidden;
+  box-shadow: 0 25px 40px -12px rgba(0,0,0,0.3);
+  animation: fadeInUp 0.2s ease;
+  border: 1px solid #e2e8f0;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 1px solid #eef2f6;
+  background-color: #ffffff;
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #0f2b1f;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #6c7a91;
+  transition: 0.2s;
+  line-height: 1;
+}
+
+.modal-close:hover {
+  color: #1e3a2f;
+}
+
+.modal-body {
+  padding: 28px 24px 32px;
+  text-align: center;
+}
+
+.modal-body p {
+  margin-bottom: 28px;
+  font-size: 1rem;
+  color: #2c3e4e;
+}
+
+.demo-ok {
+  background-color: #1e3a2f;
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 40px;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.demo-ok:hover {
+  background-color: #0b2b1f;
+}
+
+/* ---------- RESPONSIVE (tablets y móviles) ---------- */
+
+/* Tablets y pantallas medianas (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 260px;
+  }
+  .main-content {
+    margin-left: 260px;
+    width: calc(100% - 260px);
+  }
+  h1 {
+    font-size: 2.6rem;
+  }
+  section {
+    padding: 48px 28px;
+  }
+}
+
+/* Pantallas pequeñas: sidebar se transforma a barra horizontal tipo bottom? Para mejor experiencia, en móvil el sidebar se coloca arriba o inferior? 
+   Diseño: en móvil (<768px) el sidebar se convierte en barra inferior fija con botones en fila y el contenido fluye normalmente.
+   Así se asegura que los botones sean accesibles sin ocupar espacio excesivo lateral. */
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+  
+  /* Sidebar pasa a ser barra inferior tipo mobile */
+  .sidebar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    top: auto;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-right: none;
+    border-top: 1px solid #e2e8f0;
+    background-color: #ffffff;
+    z-index: 200;
+    padding: 10px 20px;
+    box-shadow: 0 -2px 12px rgba(0,0,0,0.05);
+  }
+  
+  .sidebar-logo {
+    display: none; /* Ocultamos logo en mobile para ahorrar espacio, opcional */
+  }
+  
+  .sidebar-nav {
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    padding: 8px 0;
+    width: 100%;
+  }
+  
+  .sidebar-btn {
+    width: auto;
+    padding: 10px 24px;
+    font-size: 0.9rem;
+    flex: 1;
+    max-width: 160px;
+  }
+  
+  .sidebar-footer {
+    display: none;
+  }
+  
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+    padding-bottom: 80px; /* espacio extra para no tapar el sidebar inferior */
+  }
+  
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 48px;
+  }
+  
+  .hero-buttons {
+    justify-content: center;
+  }
+  
+  .hero-image {
+    order: 1;
+    width: 100%;
+    min-height: 200px;
+  }
+  
+  .hero-text {
+    order: 2;
+  }
+  
+  h1 {
+    font-size: 2.2rem;
+  }
+  
+  h2 {
+    font-size: 1.7rem;
+  }
+  
+  section {
+    padding: 44px 20px;
+  }
+  
+  .features-grid {
+    gap: 20px;
+  }
+  
+  .step {
+    min-width: 100%;
+  }
+  
+  .cta-card {
+    padding: 40px 20px;
+  }
+}
+
+/* Móviles pequeños (max-width: 480px) */
+@media (max-width: 480px) {
+  .sidebar-nav {
+    gap: 12px;
+  }
+  
+  .sidebar-btn {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+  }
+  
+  .btn-primary, .btn-secondary {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+  
+  h1 {
+    font-size: 1.9rem;
+  }
+  
+  .hero-image i {
+    font-size: 5rem;
+  }
+  
+  .feature-card i {
+    font-size: 2.2rem;
+  }
+  
+  .modal-container {
+    width: 92%;
+    border-radius: 28px;
+  }
+  
+  .modal-header h3 {
+    font-size: 1.3rem;
+  }
+}
+
+/* Ajuste para pantallas muy altas o en landscape */
+@media (min-height: 800px) and (max-width: 768px) {
+  .main-content {
+    padding-bottom: 90px;
+  }
+}
+
+/* Evitar conflicto de márgenes en modales activos */
+body.modal-open {
+  overflow: hidden;
+}
+
+/* Estilos para enlaces o textos */
+a {
+  text-decoration: none;
+}
+
+/* Mejora accesibilidad focus */
+button:focus-visible, .sidebar-btn:focus-visible {
+  outline: 2px solid #2c5f2d;
+  outline-offset: 2px;
+}
+
+/* Sin degradados, todos los fondos son uniformes, colores planos */
+/* ========== MODALES - ESTILOS DE FORMULARIOS E INPUTS ========== */
+/* Estos estilos complementan los modales existentes */
+
+/* Contenedor del formulario dentro del modal */
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+/* Grupo de formulario */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #1e293b;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.form-group label i {
+  font-size: 0.8rem;
+  color: #5b6e8c;
+}
+
+/* Input con ícono */
+.input-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon i {
+  position: absolute;
+  left: 14px;
+  color: #94a3b8;
+  font-size: 1rem;
+  pointer-events: none;
+}
+
+.input-icon input {
+  width: 100%;
+  padding: 12px 12px 12px 42px;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-family: 'Inter', sans-serif;
+  transition: all 0.2s ease;
+  background-color: #ffffff;
+  color: #0f172a;
+}
+
+.input-icon input:focus {
+  outline: none;
+  border-color: #1e3a2f;
+  box-shadow: 0 0 0 3px rgba(30, 58, 47, 0.1);
+}
+
+.input-icon input::placeholder {
+  color: #94a3b8;
+  font-size: 0.85rem;
+}
+
+/* Input sin ícono (para casos específicos) */
+.modal-form input:not(.input-icon input) {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-family: 'Inter', sans-serif;
+  transition: all 0.2s ease;
+  background-color: #ffffff;
+}
+
+.modal-form input:focus {
+  outline: none;
+  border-color: #1e3a2f;
+  box-shadow: 0 0 0 3px rgba(30, 58, 47, 0.1);
+}
+
+/* Opciones del formulario (checkbox, links) */
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 4px 0;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: #475569;
+  cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: #1e3a2f;
+}
+
+.forgot-password {
+  font-size: 0.85rem;
+  color: #1e3a2f;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.forgot-password:hover {
+  color: #0f2b1f;
+  text-decoration: underline;
+}
+
+/* Botón de ancho completo dentro del modal */
+.btn-full {
+  width: 100%;
+  margin-top: 8px;
+  padding: 12px 24px;
+  font-size: 1rem;
+}
+
+/* Texto del pie del modal */
+.modal-footer-text {
+  text-align: center;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #eef2f6;
+}
+
+.modal-footer-text p {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin: 0;
+}
+
+.modal-footer-text a {
+  color: #1e3a2f;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.modal-footer-text a:hover {
+  text-decoration: underline;
+}
+
+/* Ajustes responsivos para inputs en móvil */
+@media (max-width: 768px) {
+  .form-options {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .input-icon input {
+    padding: 11px 12px 11px 40px;
+    font-size: 0.9rem;
+  }
+  
+  .modal-form input {
+    font-size: 0.9rem;
+  }
+  
+  .btn-full {
+    padding: 11px 20px;
+  }
+}
+
+/* Estado de error para inputs (opcional, útil para validación) */
+.input-icon input.error {
+  border-color: #dc2626;
+  background-color: #fef2f2;
+}
+
+.input-icon input.error:focus {
+  border-color: #dc2626;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+.error-message {
+  color: #dc2626;
+  font-size: 0.75rem;
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Estilo para input exitoso (validación) */
+.input-icon input.valid {
+  border-color: #10b981;
+}
+
+/* Ajustes adicionales para modales */
+.modal-body {
+  padding: 28px 24px 32px;
+}
+
+.modal-container {
+  max-width: 460px;
+  width: 90%;
+}
+
+.modal-header h3 i {
+  margin-right: 8px;
+  color: #1e3a2f;
+}
+
+/* Estilo para select dentro de modales (si se necesita) */
+.modal-form select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-family: 'Inter', sans-serif;
+  background-color: #ffffff;
+  color: #0f172a;
+  cursor: pointer;
+}
+
+.modal-form select:focus {
+  outline: none;
+  border-color: #1e3a2f;
+  box-shadow: 0 0 0 3px rgba(30, 58, 47, 0.1);
+}
+
+/* Textarea dentro de modales (si se necesita) */
+.modal-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-family: 'Inter', sans-serif;
+  resize: vertical;
+  min-height: 80px;
+}
+
+.modal-form textarea:focus {
+  outline: none;
+  border-color: #1e3a2f;
+  box-shadow: 0 0 0 3px rgba(30, 58, 47, 0.1);
+}
+
+/* Animación suave para inputs al focus */
+.input-icon input,
+.modal-form input,
+.modal-form select,
+.modal-form textarea {
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* Estilo para contraseña (toggle opcional) */
+.password-toggle {
+  position: absolute;
+  right: 14px;
+  cursor: pointer;
+  color: #94a3b8;
+  z-index: 2;
+  background: transparent;
+  border: none;
+  font-size: 1rem;
+}
+
+.input-icon {
+  position: relative;
+}
+
+/* Mejora para móviles pequeños */
+@media (max-width: 480px) {
+  .modal-body {
+    padding: 20px 18px 24px;
+  }
+  
+  .form-group label {
+    font-size: 0.8rem;
+  }
+  
+  .input-icon input {
+    padding: 10px 12px 10px 38px;
+    font-size: 0.85rem;
+  }
+  
+  .checkbox-label {
+    font-size: 0.8rem;
+  }
+  
+  .forgot-password {
+    font-size: 0.8rem;
+  }
+  
+  .modal-footer-text p {
+    font-size: 0.8rem;
+  }
+}
+
+/* Sin degradados - todos los colores son sólidos */
+/* Paleta de colores utilizada:
+   - Verde principal: #1e3a2f / #2c5f2d
+   - Fondos: #ffffff, #f8fafc
+   - Bordes: #cbd5e1, #e2e8f0
+   - Texto: #0f172a, #475569, #64748b
+   - Errores: #dc2626
+*/
